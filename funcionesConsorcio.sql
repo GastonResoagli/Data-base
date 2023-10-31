@@ -61,6 +61,6 @@ END;
 EXEC InsertarConsorcio 7, 7, 500, 'Edificio Pepega 1', 'Av. Poggers 1522', 1, 1, 349
 EXEC InsertarConsorcio 7, 7, 501, 'Edificio Jupiter 1', '9 de Julio 2002', 1, 1, 349
 --Modificamos el registro el nombre y direccion del primer registro insertado
-EXEC ModificarConsorcio 7, 7, 500, 'Edificio Neptuno 1', 'Uruguay 1222', 1, 1, 349
+EXEC ModificarConsorcio 7, 7, 500, 'Edificio Neptuno 1', 'Av Poggers 1522', 1, 1, 349
 --Acontinuacion eliminamos el Edificio Jupiter 1
 EXEC EliminarConsorcio 7, 7, 501
