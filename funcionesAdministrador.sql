@@ -61,7 +61,8 @@ RETURN (
 EXEC InsertarAdministrador(:@apeynom, :@viveahi, :@tel, :@sexo, :@fechnac) 
 EXEC InsertarAdministrador 'LOPEZ JUAN CARLOS', 'S', 3794222222, 'M', '19920828'
 EXEC InsertarAdministrador 'RAMIREZ JULIA', 'N', 3794448899, 'F', '19910521'
---Modificamos el registro recien insertado 
+
+--Modificamos el primer registro insertado
 EXEC ModificarAdministrador 349, 'LOPEZ JUAN CARLOS', 'S', 3794420111, 'M', '19920828' 
 
 --Eliminamos el registro de RAMIREZ JULIA
