@@ -58,11 +58,16 @@ RETURN (
 
 
 --Pruebas 
-EXEC InsertarAdministrador(:@apeynom, :@viveahi, :@tel, :@sexo, :@fechnac) 
+--Insertamos administradores usando el procedimiento almacenado
 EXEC InsertarAdministrador 'LOPEZ JUAN CARLOS', 'S', 3794222222, 'M', '19920828'
 EXEC InsertarAdministrador 'RAMIREZ JULIA', 'N', 3794448899, 'F', '19910521'
+EXEC InsertarAdministrador 'TUCKSON FACUNDO', 'S', 3794123222, 'F', '19900121'
 
---Modificamos el primer registro insertado
+--Insertamos usando sentencias INSERT
+Insert into administrador(apeynom,viveahi,tel,sexo,fechnac) values ('PEREZ EZEQUIEL', 'N', '3794112233', 'M', '19850218')
+Insert into administrador(apeynom,viveahi,tel,sexo,fechnac) values ('GIORNO LUCIA', 'N', '3794128888', 'F', '19881009')
+
+--Modificamos el primer registro insertado en las pruebas
 EXEC ModificarAdministrador 349, 'LOPEZ JUAN CARLOS', 'S', 3794420111, 'M', '19920828' 
 
 --Eliminamos el registro de RAMIREZ JULIA
