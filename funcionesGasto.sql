@@ -53,13 +53,16 @@ BEGIN
 END;
 
 --Pruebas
---Insertar gastos
-EXEC InsertarGasto(:@idprovincia, :@idlocalidad, :@idconsorcio, :@periodo, :@fechapago, :@idtipogasto, :@importe) 
+--Insertamos gasto usando un procedimiento almacenado
 EXEC InsertarGasto 7, 7,500, 1,'20230101', 5, 500.50;
 EXEC InsertarGasto 7, 7,500, 2,'20230211', 3, 48522.99;
 EXEC InsertarGasto 7, 7,500, 1,'20230310', 3, 62573.65;
 EXEC InsertarGasto 7, 7,500, 1,'20230405', 2, 91137.50;
 EXEC InsertarGasto 7, 7,500, 1,'20230509', 2, 3031.15;
+
+--Aqui insertamos nuevos registros usando sentencias INSERT
+INSERT INTO gasto (idprovincia,idlocalidad,idconsorcio,periodo,fechapago,idtipogasto,importe) VALUES (7,7,502,6,'20230616',5,608.97)
+INSERT INTO gasto (idprovincia,idlocalidad,idconsorcio,periodo,fechapago,idtipogasto,importe) VALUES (7,7,503,3,'20230311',3,48026.65)
 
 --Modificamos el ultimo registro gasto insertado
 EXEC ModificarGasto 16011, 7, 7, 500, 1, '20230511', 2, 4031.15
