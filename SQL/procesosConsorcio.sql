@@ -1,4 +1,4 @@
---Funcion para insertar un nuevo registro a la tabla consorcio
+--Proceso para insertar un nuevo registro a la tabla consorcio
 CREATE PROCEDURE InsertarConsorcio
 (
     @idprovincia int,
@@ -16,7 +16,7 @@ BEGIN
     VALUES (@idprovincia, @idlocalidad, @idconsorcio, @nombre, @direccion, @idzona, @idconserje, @idadmin);
 END;
 
---Funcion para eliminar un registro de la tabla consorcio
+--Proceso para eliminar un registro de la tabla consorcio
 CREATE PROCEDURE EliminarConsorcio
 (
     @idprovincia int,
@@ -31,7 +31,7 @@ BEGIN
     AND idconsorcio = @idconsorcio;
 END;
 
---Funcion para modificar un registro en la tabla consorcio
+--Proceso para modificar un registro en la tabla consorcio
 CREATE PROCEDURE ModificarConsorcio
 (
     @idprovincia int,
