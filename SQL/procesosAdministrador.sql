@@ -1,4 +1,4 @@
---Funcion para insertar un nuevo registro a la tabla administrador
+--Proceso para insertar un nuevo registro a la tabla administrador
 CREATE PROCEDURE InsertarAdministrador
 (
     @apeynom varchar(50),
@@ -13,7 +13,7 @@ BEGIN
     VALUES (@apeynom, @viveahi, @tel, @sexo, @fechnac);
 END;
 
---Funcion para eliminar un registro de la tabla administrador
+--Proceso para eliminar un registro de la tabla administrador
 CREATE PROCEDURE EliminarAdministrador
 (
     @idadmin int
@@ -24,7 +24,7 @@ BEGIN
     WHERE idadmin = @idadmin;
 END;
 
---Funcion para modificar un registro en la tabla administrador
+--Proceso para modificar un registro en la tabla administrador
 CREATE PROCEDURE ModificarAdministrador
 (
     @idadmin int,
