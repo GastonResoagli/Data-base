@@ -1,4 +1,4 @@
---Funcion para insertar un nuevo registro a la tabla gasto
+--Proceso para insertar un nuevo registro a la tabla gasto
 CREATE PROCEDURE InsertarGasto
 (
     @idprovincia int,
@@ -15,7 +15,7 @@ BEGIN
     VALUES (@idprovincia, @idlocalidad, @idconsorcio, @periodo, @fechapago, @idtipogasto, @importe);
 END;
 
---Funcion para eliminar un registro de la tabla consorcio
+--Proceso para eliminar un registro de la tabla consorcio
 CREATE PROCEDURE EliminarGasto
 (
     @idgasto int
@@ -26,7 +26,7 @@ BEGIN
     WHERE idgasto = @idgasto;
 END;
 
---Funcion para modificar un registro en la tabla consorcio
+--Proceso para modificar un registro en la tabla consorcio
 CREATE PROCEDURE ModificarGasto
 (
     @idgasto int,
